@@ -17,7 +17,7 @@ através do comando "global" e padronizado com o nome "_start".).
     global _start
     ```
 
-- **`global _start`**: Esta ainda não sei.
+- **`global _start`**: marcador padrão (O primeiro e definido)
 
 - **`_start`**: Define o ponto de entrada do programa Assembly. É análogo ao `int main()` em C.
 
