@@ -1,0 +1,21 @@
+# Arquivos de objeto compilados
+*.o
+
+# Arquivos de saída do linker
+*.out
+*.bin
+*.elf
+
+# Arquivos de saída do compilador
+*.lst
+*.map
+
+# Arquivos de backup
+*~
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Diretório de saída
+out/
