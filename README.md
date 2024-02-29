@@ -1,4 +1,4 @@
-# README - Estudo de Linguagem Assembly
+# Estudo de Linguagem Assembly
 
 ## Descrição
 
