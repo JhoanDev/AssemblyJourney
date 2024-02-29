@@ -5,7 +5,7 @@
 - **`segment`**: É uma parte de uma seção.
 
 - **`section .data`**: Esta é a seção onde ficam as "constantes".
-- 
+  
 - **`section .bss`**: Esta é a seção onde ficam as "variáveis".
 
 - **`section .text`**: Esta é a seção que teremos o que o programa irá executar (Um marcador em particular deve ser o primeiro e definido
