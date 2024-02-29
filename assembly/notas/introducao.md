@@ -1,4 +1,4 @@
-# Introdução à Linguagem Assembly
+## Introdução à Linguagem Assembly
 
 A linguagem Assembly é uma linguagem de programação de baixo nível que está intimamente ligada à arquitetura do computador. Ela oferece um nível de abstração extremamente próximo ao código de máquina, permitindo que os programadores escrevam instruções que são diretamente executadas pelo processador. Ao contrário das linguagens de alto nível como Python.
 
