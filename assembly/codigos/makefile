@@ -1,6 +1,6 @@
 NOME = entrada
 
-all: $(NOME).o
+target: $(NOME).o
 	ld -s -o main $(NOME).o
 	rm -rf *.o
 	clear
