@@ -1,5 +1,7 @@
 ## Sintaxe assembly
 
+- **`;`**: É utilizado para realizar comentarios no codigo fonte em assembly.
+
 - **`section .data`**: Esta é a seção onde ficam as "variáveis".
 
 - **`section .text`**: Esta seção ainda não sei.
