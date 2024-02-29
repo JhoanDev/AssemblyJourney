@@ -1,8 +1,9 @@
-### Registradores
+## Registradores
 
 Na linguagem Assembly, os registradores são elementos fundamentais utilizados para armazenar dados temporários e realizar operações aritméticas e lógicas. Eles são peças-chave na interação direta com o processador e na manipulação de dados em nível de hardware. Neste contexto, vamos abordar os principais registradores de 64 bits (prefixo "r") e 32 bits (prefixo "e"):
 
 #### Registradores de 64 bits (r):
+
 - **rax**: Registrador usado para armazenar valores retornados de comandos.
 - **rbx**: Registrador preservado, cujo conteúdo deve ser mantido ao longo da execução de uma função. Deve ser usado com cautela.
 - **rcx**: Registrador de uso geral, frequentemente utilizado como contador em loops ou para armazenar valores temporários.
@@ -13,6 +14,7 @@ Na linguagem Assembly, os registradores são elementos fundamentais utilizados p
 - **rsi**: Utilizado na passagem de argumentos para uma função, contém os próprios argumentos.
 
 #### Registradores de 32 bits (e):
+
 - **eax**: Versão de 32 bits do registrador acumulador (rax).
 - **ebx**: Versão de 32 bits do registrador preservado (rbx).
 - **ecx**: Versão de 32 bits do registrador de uso geral (rcx)
