@@ -13,14 +13,8 @@
 - **`int 0x80`**: Chama o sistema operacional para executar o que está nos registradores.
 
     ```assembly
-<<<<<<< HEAD
-    mov eax, 0x01    ;(Move o valor 1 para o registrador eax, usado para indicar a syscall "sys_exit")
-    mov ebx, 0x00   ;(Move o valor 0 para o registrador ebx, usado para indicar o status de saída "exit status")
-    int 0x80    ;(Chama o sistema operacional para executar a syscall "sys_exit" e encerrar o programa)
-=======
     mov eax, 0x01    ;Move o valor 1 para o registrador eax, usado para indicar a syscall "sys_exit"
     mov ebx, 0x00   ;Move o valor 0 para o registrador ebx, usado para indicar o status de saída "exit status"
     int 0x80    ;Chama o sistema operacional para executar a syscall "sys_exit" e encerrar o programa
->>>>>>> 3553f9f (refact: comentarios)
     ```
 
