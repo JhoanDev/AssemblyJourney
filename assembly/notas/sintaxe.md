@@ -30,14 +30,6 @@ através do comando "global" e padronizado com o nome "_start".).
     ```
 
 - **`equ`**: Usado para salvar um valor,  É análogo ao `=` em C.
-    
-    ```assembly
-    mov eax, 0x01    ;Move o valor 1 para o registrador eax, usado para indicar a syscall "sys_exit"
-    mov ebx, 0x00   ;Move o valor 0 para o registrador ebx, usado para indicar o status de saída "exit status"
-    int 0x80    ;Chama o sistema operacional para executar a syscall "sys_exit" e encerrar o programa
-    ```
-
-Aqui está a parte de alocação de memória padronizada em Markdown:
 
 ### Alocação de Memória
 
