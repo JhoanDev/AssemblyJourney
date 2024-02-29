@@ -6,6 +6,7 @@ section .data
     hello db 'Hello World!', 0x0A
     tam equ 0x0D ;tamanho da mensagem 
     ; tam equ $- hello (mesma coisa)
+
 section .text
 
 global _start
