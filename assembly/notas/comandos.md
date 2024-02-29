@@ -10,3 +10,4 @@ mov ebx, 0x01   ;Define o file descriptor para stdout, saída padrão
 mov ecx,    ;Ponteiro para a saída desejada
 mov edx,    ;Tamanho da saída.
 int 0x80    ;Chama o kernel para escrever a saída na saída padrão
+```
