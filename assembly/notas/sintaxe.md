@@ -1,19 +1,20 @@
 ## Sintaxe assembly
 
-`section .data` é a seção onde ficam as "variáveis"
+- **`section .data`**: Esta é a seção onde ficam as "variáveis".
 
-`section .text` ainda não sei
+- **`section .text`**: Esta seção ainda não sei.
 
-`global _start` ainda não sei
- 
-`_start` como se fosse o int main do C
-   
-`mov` Significa mover ex: mov eax, 0x01 (movendo o valor 1 para o registrador eax)
- 
-`int 0x80 ` chama o sistema operacional para executar o que esta nmos registradores
+- **`global _start`**: Esta ainda não sei.
 
-    int 0x80 ;executa systema operacional
+- **`_start`**: Define o ponto de entrada do programa Assembly. É análogo ao `int main()` em C.
 
-    mov eax, 0x01 ; encerrar o programa
-    mov ebx, 0x00 ; return 0
-    int 0x80
+- **`mov`**: Significa mover. Exemplo: `mov eax, 0x01` (move o valor 1 para o registrador `eax`).
+
+- **`int 0x80`**: Chama o sistema operacional para executar o que está nos registradores.
+
+    ```assembly
+    mov eax, 0x01    (Move o valor 1 para o registrador eax, usado para indicar a syscall "sys_exit")
+    mov ebx, 0x00   (Move o valor 0 para o registrador ebx, usado para indicar o status de saída "exit status")
+    int 0x80    (Chama o sistema operacional para executar a syscall "sys_exit" e encerrar o programa.)
+    ```
+
