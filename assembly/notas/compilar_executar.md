@@ -19,7 +19,7 @@ Onde:
 - `-s` significa "stripping", que remove informações desnecessárias do executável, tornando-o menor.
 - `-o main` especifica o nome do arquivo de saída como "main", mas você pode substituir "main" pelo nome desejado para seu executável.
 
-Para executar :
+Para executar:
 
 ```bash
 ./main
