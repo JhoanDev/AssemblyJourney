@@ -150,3 +150,102 @@ jl label_less    ; Salta para label_less se eax for menor que ebx
 
 Essas condições são **saltos condicionais** ou seja, dependem que uma comparação ocorra. Porém
 ainda existe o comando `jmp` que é um salto **incondicional**, isso é, não depende que nada ocorra. 
+
+## AND_OR_XOR
+
+Todos eles funcionam comparando bit a bit de dois dados, e retornam um valor
+
+### AND
+
+No `and` caso os dois bits sejam 1 resulta em 1, caso seja 1 e 0 ou 0 e 0 ou 0 e 1 ele retorna 0
+
+    (0,0) = 0
+    (1,0) = 0
+    (0,1) = 0
+    (1,1) = 1
+
+### OR
+
+No `or` funciona caso os dois bits sejam 1 ou 1 e 0 ou 0 e 1, caso seja 0 e 0 ele retorna 0
+
+    (0,0) = 0
+    (1,0) = 1
+    (0,1) = 1
+    (1,1) = 1
+
+### XOR
+
+No `xor` funciona caso os dois bits sejam iguais retorna 0, caso diferentes retorna 0
+
+    (0,0) = 0
+    (1,0) = 1
+    (0,1) = 1
+    (1,1) = 0
+
+#### Exemplo:
+
+        AND     OR      XOR
+    7 - 0111    0111    0111
+    5 - 0101    0101    0101
+        0101    0111    0010
+        5       7       2
+
+## Operações matématicas
+
+`add`: Soma dois dados e armazena no primeiro registrador, análogo ao `+=` em `C`
+
+```assembly
+mov r8d, 0x07 ; movendo o valor 7 para o registrador r8d
+add eax, r8d ; adicionando o que está no registrador r8d ao eax
+```
+
+`sub`: Subtrai dois dados e armazena no primeiro registrador, análogo ao `-=` em `C`
+
+```assembly
+mov r8d, 0x07 ; movendo o valor 7 para o registrador r8d
+sub eax, r8d ; subtraindo do que está no registrador r8d ao eax
+```
+
+`imul`: multiplica dois dados e armazena no primeiro registrador, análogo ao `*=` em `C`
+
+```assembly
+imul ebx, 0x0A ; Multiplica o valor contido no registrador ebx por 10.
+```
+
+## Apontadores
+
+`lea`: Ele pega o endereço da memoria de uma "variavel" e coloca o endereço no registrador indicado;
+
+```assembly
+lea esi, [BUFFER] ;tudo que ocorrer com o valor BUFFER a partir desse momento irá refletir no esi pois esão apontando para o mesmo endereço
+```
+
+`[]`: Os colchetes servem normalmente para indicar que o dado naquele endereço deve ser acessado, pode ser análogo ao `*` em .
+
+Quando na intrução lea ele tem significado diferente, ele é utilizado para dizermos que queremos calcular o endereço de memória do dado.
+
+```assembly
+lea esi, [BUFFER] ; calculando e armazenando o endereço de BUFFER
+```
+
+## Chamadas e Retornos
+
+`call`: Quando a instrução call é executada, o endereço de retorno (o endereço da próxima instrução após a call) é colocado na pilha (stack).
+Em seguida, o fluxo de controle é transferido para a "função" chamada
+
+```assembly
+_start:
+    call converte_valor 
+    call mostrar_valor
+```
+
+`ret`: Quando a instrução ret é executada, o endereço de retorno é retirado da pilha e o controle é transferido de volta para o endereço de retorno (Onde a call desse bloco foi chamada), continuando a execução a partir desse ponto.
+
+```assembly
+converte_valor:
+    lea esi,[v1]
+    mov ecx, 0x01
+    call string_to_int ; chamou outra "função"
+    add eax, 0x02
+    ret ; retornou para o fluxo principal
+```
