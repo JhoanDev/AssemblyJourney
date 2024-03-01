@@ -1,4 +1,4 @@
-NOME = maiorNum
+NOME = saoIguais
 
 target: $(NOME).o
 	ld -s -o main $(NOME).o
