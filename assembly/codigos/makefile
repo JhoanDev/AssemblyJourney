@@ -1,4 +1,4 @@
-NOME = testaBiblioteca
+NOME = lea
 
 target: $(NOME).o
 	ld -s -o main $(NOME).o

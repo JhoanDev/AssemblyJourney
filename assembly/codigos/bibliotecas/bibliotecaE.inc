@@ -12,6 +12,7 @@ segment .data
     STD_OUT equ 0x01    ; Saída padrão
     
     TAM_BUFFER equ 0x0A
+    
 segment .bss
     BUFFER resb 0x01
 
