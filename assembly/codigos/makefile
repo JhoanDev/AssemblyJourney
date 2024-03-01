@@ -1,4 +1,4 @@
-NOME = testaBiblioteca
+NOME = converte
 
 target: $(NOME).o
 	ld -s -o main $(NOME).o

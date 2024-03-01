@@ -24,3 +24,44 @@ saidaResultado:
     mov rdx, TAM_BUFFER
     int SYS_CALL
     ret
+
+;--------------------------------------
+; String para inteiro
+;--------------------------------------
+; Entrada: esi (valor conv) ecx (tam)
+; Saida: eax
+;--------------------------------------
+
+string_to_int:
+    xor ebx, ebx ;zerando ebx
+.proximo_digitosi:
+    movzx eax, byte[esi] ; estou movendo apenas um byte para meu registrador eax e preenchendo os outros 24 bits com zero
+    inc esi ; incrementando esi, é como se tivesse um vetor na posicao [0] ai com o inc eu aponto apra ele na posicao [1]
+    sub al, '0' ; subtraindo
+    imul ebx, 0x0A ; Multiplica o valor contido no registrador ebx por 10.
+    add ebx, eax ; ebx = ebx + eax
+    loop .proximo_digitosi ; while (--ecx) enquanto nao for 0 ele continua
+    mov eax, ebx
+    ret
+
+;--------------------------------------
+; Inteiro para string
+;--------------------------------------
+; Entrada: eax (vom um inteiro)
+; Saida: BUFFER (valor em ecx) TAM_BUFFER (edx)
+;--------------------------------------
+
+int_to_string:
+    lea esi, [BUFFER] ;fazendo eles dividerem o mesmo espaço de memoria
+    add esi, 0x09
+    mov byte[esi], 0x0A
+    mov ebx, 0x0A
+.proximo_digitois:
+    xor edx,edx
+    div ebx
+    add dl, '0' ; adcionando
+    dec esi
+    mov [esi], dl
+    test eax,eax
+    jnz .proximo_digitois
+    ret
