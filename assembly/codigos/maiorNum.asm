@@ -31,8 +31,8 @@ _start:
     jg maior ; como irá comparar
     mov ecx, msg2
     mov edx, tam2
-    ; je == 
     jmp final
+    ; je == 
     ; jg > 
     ; jge >=
     ; jl <
