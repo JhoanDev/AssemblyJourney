@@ -1,4 +1,4 @@
-%include 'bibliotecaE.inc'
+%include 'bibliotecas/bibliotecaE.inc'
 
 section .text
     global _start

@@ -1,4 +1,4 @@
-%include 'bibliotecaE.inc'
+%include 'bibliotecas/bibliotecaE.inc'
 
 section .data
     v1 dw '2', LN, EOS
