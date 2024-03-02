@@ -157,7 +157,7 @@ Todos eles funcionam comparando bit a bit de dois dados, e retornam um valor
 
 ### AND
 
-No `and` caso os dois bits sejam 1 resulta em 1, caso seja 1 e 0 ou 0 e 0 ou 0 e 1 ele retorna 0
+No `and` é necessario que os dois bits comparados sejam 1 para retornar 1, ou seja o único par onde retorna 1 é no par (1,1).
 
     (0,0) = 0
     (1,0) = 0
@@ -166,7 +166,7 @@ No `and` caso os dois bits sejam 1 resulta em 1, caso seja 1 e 0 ou 0 e 0 ou 0 e
 
 ### OR
 
-No `or` funciona caso os dois bits sejam 1 ou 1 e 0 ou 0 e 1, caso seja 0 e 0 ele retorna 0
+No `or` é necessario que pelomenos um dos bits comparados seja 1, ou seja único caso onde retorna 0 é no par (0,0).
 
     (0,0) = 0
     (1,0) = 1
@@ -175,7 +175,7 @@ No `or` funciona caso os dois bits sejam 1 ou 1 e 0 ou 0 e 1, caso seja 0 e 0 el
 
 ### XOR
 
-No `xor` funciona caso os dois bits sejam iguais retorna 0, caso diferentes retorna 0
+No `xor` funciona caso os dois bits sejam iguais retorna 0, caso diferentes retorna 1
 
     (0,0) = 0
     (1,0) = 1
