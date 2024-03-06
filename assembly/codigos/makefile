@@ -1,4 +1,4 @@
-NOME = lea
+NOME = menu
 
 target: $(NOME).o
 	ld -s -o main $(NOME).o
