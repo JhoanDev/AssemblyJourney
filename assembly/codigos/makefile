@@ -1,5 +1,4 @@
-NOME = menu
-
+NOME = parOuImpar
 target: $(NOME).o
 	ld -s -o main $(NOME).o
 	rm -rf *.o

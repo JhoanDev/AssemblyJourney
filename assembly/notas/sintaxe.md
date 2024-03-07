@@ -212,6 +212,16 @@ sub eax, r8d ; subtraindo do que está no registrador r8d ao eax
 imul ebx, 0x0A ; Multiplica o valor contido no registrador ebx por 10.
 ```
 
+`div`: funciona de forma bem diferente dos demais, ele divide o valor que esta no registrador rax pelo valor que desejar e sempre armazena o resto em rdx
+
+```assembly
+    xor edx, edx ; zerando edx
+    mov eax, 0x0A ; valor 10
+    mov ebx, 0x02 ; valor 2
+    div ebx ; eax = eax / ebx
+```
+logo após estes comandos eax fica com o valor 5 e edx com 0 já que foi uma divisão exata.
+
 ## Apontadores
 
 `lea`: Ele pega o endereço da memoria de uma "variavel" e coloca o endereço no registrador indicado;
