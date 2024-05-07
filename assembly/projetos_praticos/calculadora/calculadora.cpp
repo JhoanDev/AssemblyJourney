@@ -17,7 +17,7 @@ int main()
         cout << "1. Adição (+)" << endl;
         cout << "2. Subtração (-)" << endl;
         cout << "3. Multiplicação (*)" << endl;
-        cout << "4. Divisão inteira(/)" << endl;
+        cout << "4. Divisão inteira (/)" << endl;
         cout << "5. Sair" << endl;
         cout << "Opção: ";
         cin >> operacao;
