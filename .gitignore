@@ -20,5 +20,7 @@
 # Diretório de saída
 out/
 
+settings.json
+
 # executaveis
 main

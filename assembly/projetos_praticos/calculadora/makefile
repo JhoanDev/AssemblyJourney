@@ -1,7 +1,7 @@
-NOME = param
+NOME = calculadora
 
 all: $(NOME).cpp $(NOME).o
-	g++ $(NOME).o $(NOME).cpp -o main
+	g++ -no-pie $(NOME).o $(NOME).cpp -o main
 	rm -rf *.o
 	clear
 
