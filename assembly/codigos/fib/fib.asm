@@ -8,7 +8,6 @@ fibonacci:
     mov r9, 0x01
     jmp _calculafib
     
-
 _calculafib:
     sub rdi, 0x01
     cmp rdi, 0x00
