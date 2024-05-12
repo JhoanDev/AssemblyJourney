@@ -1,4 +1,4 @@
-NOME = quadrado
+NOME = piramide
 
 target: $(NOME).o
 	ld -s -o main $(NOME).o

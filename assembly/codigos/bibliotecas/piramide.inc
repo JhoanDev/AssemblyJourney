@@ -11,10 +11,9 @@ segment .data
     STD_IN equ 0x00     ; Entrada padrão
     STD_OUT equ 0x01    ; Saída padrão
 
-    estrela db '* '
-    espaco db LN
-    tam_estrela equ $- estrela
-    tam_espaco equ $- espaco
+    estrela db '*', EOS
+    espaco db ' ', EOS
+    quebra_de_linha db LN, EOS
 
 segment .text
 
@@ -22,7 +21,7 @@ printa_estrela:
     mov rax, SYS_WRITE
     mov rbx, STD_OUT
     mov rcx, estrela
-    mov rdx, 0x02
+    mov rdx, 0x01
     int SYS_CALL
     ret
 
@@ -30,6 +29,14 @@ printa_espaco:
     mov rax, SYS_WRITE
     mov rbx, STD_OUT
     mov rcx, espaco
-    mov rdx, tam_espaco
+    mov rdx, 0x01
+    int SYS_CALL
+    ret
+
+printa_quebra_de_linha:
+    mov rax, SYS_WRITE
+    mov rbx, STD_OUT
+    mov rcx, quebra_de_linha
+    mov rdx, 0x01
     int SYS_CALL
     ret
