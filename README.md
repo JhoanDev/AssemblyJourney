@@ -1,43 +1,107 @@
-# Aprendizado Progressivo de Assembly para Arquitetura x86
+# 📘 Aprendizado Progressivo de Assembly x86
 
-Este repositório documenta meu progresso e aprendizado na linguagem Assembly, com foco na arquitetura x86. Todos os exemplos são baseados em código Assembly compilado usando NASM e executados no sistema operacional Linux (Ubuntu). Além disso, o uso de C++ como uma linguagem auxiliar é explorado para ampliar a funcionalidade e aplicabilidade dos conceitos aprendidos.
+Este repositório documenta minha jornada de aprendizado na linguagem Assembly com foco na arquitetura **x86**, utilizando o **NASM** no sistema operacional **Linux (Ubuntu)**. A integração com **C++** também é explorada para ampliar a aplicabilidade dos conceitos estudados.
 
-## Objetivo
-O objetivo deste repositório é acompanhar meu desenvolvimento na compreensão e aplicação da linguagem Assembly na arquitetura x86. Ao registrar meus estudos, pretendo consolidar meu conhecimento e compartilhar meu progresso com outros interessados na área.
+---
 
-## Conteúdo
-- **Notas de Estudo**: Anotações pessoais sobre conceitos, instruções e técnicas de programação em Assembly, adaptadas para a arquitetura x86.
-  
-- **Códigos de Exemplo**: Programas simples e complexos escritos em Assembly para praticar e entender a aplicação prática dos conceitos aprendidos, incluindo exemplos que integram o uso de C++.
-  
-- **Projetos Práticos**: Projetos mais abrangentes que aplicam os conhecimentos de Assembly em cenários reais ou simulados, demonstrando a integração com c++.
+## 🎯 Objetivo
 
-## Estrutura do Repositório
+O objetivo principal é consolidar e compartilhar o conhecimento adquirido ao longo dos estudos em Assembly, através de anotações, exemplos práticos e projetos aplicados. Este repositório serve tanto como material de referência pessoal quanto como fonte de aprendizado para outros interessados na linguagem de baixo nível.
+
+---
+
+## 📚 Conteúdo
+
+- **📒 Notas de Estudo**  
+  Anotações organizadas sobre os principais conceitos da linguagem, como registradores, sintaxe NASM, manipulação de arquivos, integração com C++, entre outros.
+
+- **💻 Códigos de Exemplo**  
+  Programas simples e intermediários desenvolvidos em Assembly, com foco no uso de instruções específicas, leitura/escrita de dados, chamadas de sistema, lógica de decisão, entre outros tópicos.
+
+- **🧠 Projetos Práticos**  
+  Pequenos projetos que combinam os conhecimentos adquiridos e demonstram o uso de Assembly em problemas reais ou simulados, frequentemente integrando com código em C++.
+
+---
+
+## 📁 Estrutura do Repositório
+
 ```
-assembly/
-│
-├── notas/
-│   ├── introducao.md
-│   ├── registradores.md
-│   └── ...
-│
-├── codigos/
-│   ├── hello.asm
-│   ├── soma.asm
-│   └── ...
-│
-└── projetos_praticos/
-    ├── calculadora/
-    │   ├── calculadora.asm
-    │   └── calculadora.cpp
-    └── ...
+.
+├── .gitignore
+├── LICENSE
+├── README.md
+└── assembly
+    ├── notas/                      # Documentação e anotações teóricas
+    │   ├── introducao.md
+    │   ├── registradores.md
+    │   ├── sintaxe.md
+    │   ├── arquivos.md
+    │   ├── compilar_executar.md
+    │   ├── makefile.md
+    │   └── integrar_com_outra_linguagem.md
+    │
+    ├── codigos/                    # Exemplos práticos e exercícios
+    │   ├── hello.asm
+    │   ├── soma.asm
+    │   ├── maiorNum.asm
+    │   ├── entrada.asm
+    │   ├── parOuImpar.asm
+    │   ├── saoIguais.asm
+    │   ├── lea.asm
+    │   ├── menu.asm
+    │   ├── converte.asm
+    │   ├── converteValorDigitado.asm
+    │   ├── testaBiblioteca.asm
+    │   ├── piramide.asm
+    │   ├── quadrado.asm
+    │   ├── xadrez.asm
+    │   ├── bibliotecas/            # Includes auxiliares (modularização)
+    │   │   ├── arquivos.inc
+    │   │   ├── bibliotecaE.inc
+    │   │   ├── j7.inc
+    │   │   ├── menu.inc
+    │   │   ├── piramide.inc
+    │   │   ├── quadrado.inc
+    │   │   └── xadrez.inc
+    │   ├── decisao/
+    │   ├── escreverArquivo/
+    │   ├── lerArquivo/
+    │   ├── fib/
+    │   ├── parametros/
+    │   ├── questao/
+    │   └── troca/
+    │
+    └── projetos_praticos/          # Projetos completos em Assembly + C++
+        ├── calculadora/
+        ├── fatorial/
+        ├── pascal/
+        └── primo/
 ```
 
-## Licença
-Este repositório é disponibilizado sob a licença [MIT](LICENSE).
+---
 
-## Contribuição
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request com sugestões, correções ou novos conteúdos.
+## 🚀 Como Executar
 
-## Contato
-Para qualquer dúvida ou sugestão, sinta-se à vontade para entrar em contato através das issues deste repositório.
+Todos os códigos foram desenvolvidos e testados em ambiente Linux ubuntu.
+> Alguns diretórios possuem arquivos `makefile` para facilitar a compilação.
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Sinta-se à vontade para:
+
+- Abrir uma issue com dúvidas ou sugestões
+- Criar um pull request com melhorias, correções ou novos conteúdos
+
+---
+
+## 📬 Contato
+
+Para sugestões, dúvidas ou colaborações, utilize as [issues](../../issues) deste repositório.
